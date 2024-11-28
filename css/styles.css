@@ -169,7 +169,7 @@ section.country-bar {
 }
 
 section.country-bar.hidden {
-  display: none;
+  opacity: 0;
 }
 
 section.best-sellers {
