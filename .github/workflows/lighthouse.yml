@@ -10,7 +10,7 @@ on:
       url:
         description: "URL to run Lighthouse on"
         required: false
-        default: "http://localhost:8080"
+        default: "https://localhost:8080"
 
 permissions:
   issues: write
@@ -40,7 +40,7 @@ jobs:
         id: lighthouse
         continue-on-error: true
         run: |
-          URL="${{ github.event.inputs.url || 'http://localhost:8080' }}"
+          URL="${{ github.event.inputs.url || 'https://localhost:8080' }}"
           lhci autorun --collect.url=$URL
 
       - name: Create GitHub Issue with Results
