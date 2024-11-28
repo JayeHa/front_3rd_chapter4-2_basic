@@ -60,9 +60,34 @@ function displayProducts(products) {
   });
 }
 
-loadProducts();
-
-// Simulate heavy operation. It could be a complex price calculation.
-for (let i = 0; i < 10000000; i++) {
-  const temp = Math.sqrt(i) * Math.sqrt(i);
+function performHeavyTask() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      for (let i = 0; i < 1000000; i++) {
+        const temp = Math.sqrt(i) * Math.sqrt(i);
+      }
+      resolve();
+    }, 0);
+  });
 }
+
+/** 상품 섹션이 보여질 때 상품을 로드하고 무거운 작업을 수행하는 함수 */
+function loadProductsOnView() {
+  const $productSection = document.querySelector("#all-products");
+  if (!$productSection) return;
+
+  const observer = new IntersectionObserver(async (entries, observer) => {
+    entries.forEach(async (entry) => {
+      if (entry.isIntersecting) {
+        await loadProducts();
+        await performHeavyTask();
+
+        observer.unobserve($productSection);
+      }
+    });
+  });
+
+  observer.observe($productSection);
+}
+
+loadProductsOnView();
