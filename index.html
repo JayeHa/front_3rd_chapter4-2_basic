@@ -82,12 +82,25 @@
 
     <section class="hero">
       <picture>
-        <source media="(max-width: 575px)" srcset="images/Hero_Mobile.webp" />
+        <source
+          media="(max-width: 575px)"
+          srcset="
+            images/Hero_Mobile_300x300.webp 1x,
+            images/Hero_Mobile_721x721.webp 2.4x
+          "
+        />
         <source
           media="(min-width: 576px) and (max-width: 960px)"
-          srcset="images/Hero_Tablet.webp"
+          srcset="
+            images/Hero_Tablet_580x465.webp 1x,
+            images/Hero_Tablet_960x770.webp 1.66x
+          "
         />
-        <img src="images/Hero_Desktop.webp" />
+        <img
+          srcset="images/Hero_Desktop_1520x707.webp 1520w"
+          src="images/Hero_Desktop_1920x893.webp"
+          alt="Hero Image"
+        />
       </picture>
 
       <div class="hero-content">
