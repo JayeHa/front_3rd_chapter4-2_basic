@@ -1,3 +1,9 @@
+# ❗️PR 링크 입니다.
+>  과제 제출 링크 수정 기한 이후에 슬랙 아고라를 확인하여, 링크 수정이 불가능하게 되었습니다.
+> 따라서 PR 링크를 첨부드립니다. 감사합니다!
+> - PR링크: https://github.com/hanghae-plus/front_3rd_chapter4-2_basic/pull/36
+
+
 # 바닐라 JS 프로젝트 성능 개선
 
 - url: https://front-3rd-chapter4-2-basic-rho.vercel.app/
