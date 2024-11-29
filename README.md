@@ -6,7 +6,19 @@
 
 ### 개요
 
-#### 1) Lighthouse 워크플로우를 통한 비교
+#### 1) 구글 PageSpeed Insights를 사용한 성능 측정 비교
+
+<img src="/images/PageSpeedInsignts.png" alt="PageSpeed Insights" />
+
+- 개선 전:
+  https://pagespeed.web.dev/analysis/https-front-3rd-chapter4-2-basic-rho-vercel-app/pz0z37ohhh?form_factor=desktop
+
+- 개선 후:
+  https://pagespeed.web.dev/analysis/https-front-3rd-chapter4-2-basic-rho-vercel-app/r9l9gxndmb?form_factor=desktop
+
+---
+
+#### 2) Lighthouse 워크플로우를 통한 비교
 
 ##### 🎯 Lighthouse 점수 비교
 
@@ -26,15 +38,9 @@
 | **INP** | 🟢 N/A                                                                      | 🟢 N/A                                                                        | <200ms | -       |
 | **CLS** | 🟢 0.011                                                                    | 🟢 0.001                                                                      | <0.1   | -0.01   |
 
-#### 2) 구글 PageSpeed Insights를 사용한 성능 측정 비교
 
-<img src="/images/PageSpeedInsignts.png" alt="PageSpeed Insights" />
 
-- 개선 전:
-  https://pagespeed.web.dev/analysis/https-front-3rd-chapter4-2-basic-rho-vercel-app/pz0z37ohhh?form_factor=desktop
-
-- 개선 후:
-  https://pagespeed.web.dev/analysis/https-front-3rd-chapter4-2-basic-rho-vercel-app/r9l9gxndmb?form_factor=desktop
+---
 
 ### 항목별 개선 세부내역
 
@@ -62,6 +68,8 @@
 | LCP             | 🔴 14.63s                                                                   | 🟠 2.83s                                                                    | -11.8s |
 | CLS             | 🟢 0.011                                                                    | 🟢 0.001                                                                    | -0.01  |
 
+---
+
 #### 2) 스크립트 로드 최적화
 
 ##### 개선 이유
@@ -80,7 +88,9 @@
 | --------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ------ |
 | **Performance** | 🟢 92%                                                                      | 🟢 95%                                                                        | +3%    |
 | LCP             | 🟠 2.83s                                                                    | 🟢 2.46s                                                                      | -0.37s |
-| CLS             | 🟢 0.001                                                                    | 🟢 0.001                                                                      | -0.01  |
+| CLS             | 🟢 0.001                                                                    | 🟢 0.001                                                                      | 0  |
+
+---
 
 #### 3) 폰트 최적화
 
